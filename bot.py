@@ -55,14 +55,13 @@ def main():
         raise ValueError("BOT_TOKEN hin jiru.")
     if not WEB_APP_URL:
         raise ValueError("WEB_APP_URL hin jiru.")
+        threading.Thread(target=run_web, daemon=True).start()
 
-    threading.Thread(target=run_web, daemon=True).start()
+bot = Application.builder().token(BOT_TOKEN).build()
+bot.add_handler(CommandHandler("start", start))
 
-    bot = Application.builder().token(BOT_TOKEN).build()
-    bot.add_handler(CommandHandler("start", start))
-
-    print("Walin Fast Bot started...")
-    bot.run_polling()
+print("Walin Fast Bot started...")
+bot.run_polling()
 
 
 if __name__ == "__main__":
