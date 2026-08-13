@@ -58,7 +58,7 @@ def main():
 
     threading.Thread(target=run_web, daemon=True).start()
 
-    bot = Application.builder().token(8885427769:AAEBm0aJwcGqIT7kpwCyUxqdEPxzGBAxgQQ).build()
+    bot = Application.builder().token(BOT_TOKEN).build()
     bot.add_handler(CommandHandler("start", start))
 
     print("Walin Fast Bot started...")
