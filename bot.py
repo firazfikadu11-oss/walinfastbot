@@ -5,8 +5,8 @@ from flask import Flask
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, WebAppInfo
 from telegram.ext import Application, CommandHandler, ContextTypes
 
-BOT_TOKEN = os.environ.get(8885427769:AAEBm0aJwcGqIT7kpwCyUxqdEPxzGBAxgQQ")
-WEB_APP_URL = os.environ.get("https://walinfast.onrender.com")
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+WEB_APP_URL = os.environ.get("WEB_APP_URL")
 
 app = Flask(__name__)
 
